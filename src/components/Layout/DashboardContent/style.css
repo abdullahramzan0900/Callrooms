@@ -1,0 +1,102 @@
+/* Laout Start */
+main {
+    padding: 1rem;
+    background-color: #f0f2f5;  
+}
+/* SIdebar start in css */
+
+.side-bar {
+    display: flex;
+    width: 22%;
+    height: 100vh;
+ 
+}
+.side-bar aside .ps-sidebar-container {
+    width: 100%;
+    background: linear-gradient(195deg, #49a3f1,#191919);
+    color: #344767;
+    border-radius: 0.5rem;
+    box-shadow: 0rem 0.25rem 1.25rem 0rem rgba(0, 0, 0, 0.14), 0rem 0.4375rem 0.625rem -0.3125rem rgba(0, 187, 212, 0.4);
+    border: none;
+    height: calc(95vh - 2rem);
+    border-radius: 0.75rem;
+    padding: 20px;
+}
+.coudtek_img{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+}
+.coudtek_img img{
+    width: 150px;
+    height: auto;
+}
+.side-bar hr {
+    flex-shrink: 0;
+    border-width: 0;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.08);
+    height: 0.0625rem;
+    margin: 1rem 0;
+    border-bottom: none;
+    opacity: 0.25;
+    background-color: transparent;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), #ffffff, rgba(255, 255, 255, 0))!important;
+}
+nav ul li {
+    margin-bottom: 1.5rem;
+}
+nav ul li a {
+    color: #ffffff !important;
+}
+nav ul li a:hover {
+    border-radius: 4px;
+    background: linear-gradient(195deg, #49a3f1, #1A73E8);
+    color: #ffffff;
+    font-weight: 700;
+}
+ul li a span {
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+}
+ul li a span svg {
+    width: 1em;
+    height: 1em;
+    font-size: 1.6rem;
+    display: inline-block;
+    fill: currentColor;
+    margin-right: 20px;
+}
+
+/* dashboard-wrapper-content start */
+.dashboard-wrapper-content {
+    width: 73%;
+}
+/* Dashboard-Header start */
+.header {
+    width: 100%;
+    border: 1px solid black;
+    height: 50px;
+    padding: 15px;
+    background: transparent!important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .right-sec {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    border: 2px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header .right-sec span {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+

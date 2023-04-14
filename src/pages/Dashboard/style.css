@@ -1,0 +1,15 @@
+.dashboard-content {
+    display: flex;
+    justify-content: start;
+}
+.item_style{
+    height: 140px;
+}
+.main_div{
+    display: flex;
+    justify-content: space-between;
+}
+.icon_div{
+    position: relative;
+    top:-60px;
+}

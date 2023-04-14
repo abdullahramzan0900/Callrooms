@@ -1,0 +1,49 @@
+/* Login start */
+
+login-form {
+    width: 100%;
+    max-width: 450px !important;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+login-form .MuiBox-root {
+    position: relative;
+}
+login-form .form-header {
+    width: 100%;
+    height: 120px;
+    max-width: 420px;
+    margin: 0 auto;
+    position: absolute;
+    top: -12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-clip: border-box;
+    border: 0 solid rgba(0, 0, 0, 0.125);
+    background: linear-gradient(195deg, #49a3f1, #1A73E8);
+    border-radius: 0.5rem;
+    box-shadow: 0rem 0.25rem 1.25rem 0rem rgba(0, 0, 0, 0.14), 0rem 0.4375rem 0.625rem -0.3125rem rgba(0, 187, 212, 0.4);
+}
+login-form .form-header img {
+    width: 110px;
+    height: auto;
+}
+login-form form {
+    padding: 3rem;
+    padding-top: 10rem;
+    background-clip: border-box;
+    border: 0 solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.75rem;
+    box-shadow: 0rem 0.25rem 0.375rem -0.0625rem rgba(0, 0, 0, 0.1), 0rem 0.125rem 0.25rem -0.0625rem rgba(0, 0, 0, 0.06);
+}
+login-form form .MuiInputBase-formControl {
+    border-radius: 12px;
+}
+login-form form button:hover {
+    background-color: #1A73E8;
+    box-shadow: 0rem 0.875rem 1.625rem -0.75rem rgba(26, 115, 232, 0.4), 0rem 0.25rem 1.4375rem 0rem rgba(26, 115, 232, 0.15), 0rem 0.5rem 0.625rem -0.3125rem rgba(26, 115, 232, 0.2);
+}
