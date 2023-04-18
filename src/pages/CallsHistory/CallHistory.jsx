@@ -63,8 +63,7 @@ const rows = [
     TakenBy: "aaa",
   },
 ];
-
-export default function Calls() {
+export default function CallHistory() {
   return (
     <Layout>
       <DataGridTable
@@ -75,8 +74,8 @@ export default function Calls() {
         pageSize={5}
         pageSizeOptions={[5, 10, 15]}
         className="custom-data-grid"
-        tablename="Calls Table"
-        buttondata="Add Calls"
+        tablename="Calls History"
+   
       />
     </Layout>
   );

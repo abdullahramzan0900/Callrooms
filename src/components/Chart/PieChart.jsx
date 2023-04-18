@@ -53,15 +53,9 @@ const PieChart = () => {
   }, [data]);
 
   return (
-    <div style={{ width: '100%' }}>
-   
-            <h1 style={{
-                textAlign:'center'
-            }}>Calls</h1>
-
+    <>
       <canvas ref={canvasRef} />
-     
-    </div>
+    </>
   );
 };
 

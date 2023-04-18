@@ -1,23 +1,14 @@
-import React, { Component } from 'react'
+import React from "react";
+import Header from "./Header";
+import DashboardContent from "../../pages/Dashboard/DashboardContent";
 
-import Header from './Header'
-import Footer from './Footer'
-import Users from '../../pages/Users/Users'
-import Calls from '../../pages/Calls/Calls'
-import { DataGridTable } from '../DataGridTable'
-import DashboardContent from '../../pages/Dashboard/DashboardContent'
-
-
-export const ContentWrapper = ({Component}) => {
+export const ContentWrapper = () => {
   return (
-    <div className='dashboard-wrapper-content'>
-      <Header />
-        <main>
-          {/* <DataGridTable/> */}
- <DashboardContent/>
-        </main>
+    <div className="dashboard-wrapper-content">
+      {/* <Header /> */}
+      <DashboardContent/>
     </div>
-  )
-}
+  );
+};
 
-export default ContentWrapper
+export default ContentWrapper;

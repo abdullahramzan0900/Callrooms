@@ -1,6 +1,7 @@
 import * as React from "react";
-import { DataGrid, GridColDef, GridValueGetterParams } from "@mui/x-data-grid";
+import { DataGrid } from "@mui/x-data-grid";
 import './index.css'
+import { Button } from "@mui/material";
 
 export const DataGridTable = ({
   rows,
@@ -10,16 +11,23 @@ export const DataGridTable = ({
   className,
   pageSizeOptions,
   pageSize,
+  tablename,
+  buttondata
 }) => {
   return (
  
-      <div style={{ height: 400, width: "50%" }}>
-        <DataGrid
-          slotProps={{
-            columnMenu: {
-              style: { background: "blue" },
-            },
-          }}
+      <div className="datagrid" >
+        <div className="table-header">
+<div>
+<h4 style={{
+
+}}>{tablename}</h4>
+</div>
+<div>
+<Button>{buttondata}</Button>
+</div>
+        </div>
+        <DataGrid style={{ background: 'white' }}
           rows={rows}
           columns={columns}
           pagination={pagination}
