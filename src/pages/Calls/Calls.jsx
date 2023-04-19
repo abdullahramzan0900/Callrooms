@@ -63,6 +63,32 @@ const rows = [
     TakenBy: "aaa",
   },
 ];
+const array=[
+  {
+    name:'RoomNumber',
+    type:'Number'
+  },
+  {
+    name:'Time',
+    type:'time'
+  },
+  {
+    name:'Role',
+    type:'options'
+  },
+  {
+    name:'callType',
+    type:'options'
+  },
+  {
+    name:'ProjectName',
+    type:'text'
+  },
+  {
+    name:'TakenBy',
+    type:'text'
+  }
+]
 
 export default function Calls() {
   return (
@@ -77,6 +103,8 @@ export default function Calls() {
         className="custom-data-grid"
         tablename="Calls Table"
         buttondata="Add Calls"
+        formArray={array}
+        formName="Calls"
       />
     </Layout>
   );

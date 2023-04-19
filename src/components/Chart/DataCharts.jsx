@@ -43,7 +43,7 @@ function DataCharts(){
     return(
         <>
         
-      <Box sx={{ flexGrow: 1, marginBottom:"6rem", marginTop:"4rem" }}>
+      <Box  sx={{ flexGrow: 1, marginBottom:"6rem", marginTop:"4rem" }}>
         <Grid
           container
           spacing={{ xs: 2, md: 3 }}

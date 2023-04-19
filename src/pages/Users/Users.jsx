@@ -66,12 +66,76 @@ const rows = [
   { id: 15, FullName: "Roxie", Email: "Harvey", Role: 65, ProjectName: "sss" },
   { id: 16, FullName: "Roxie", Email: "Harvey", Role: 65, ProjectName: "sss" },
 ];
+const array=[
+  {
+    name:'fullName',
+    label: 'Full Name',
+    type:'text'
+  },
+  {
+    name:'email',
+    label: 'email',
+    type:'text'
+  },
+  {
+    name:'role',
+    label: 'Role',
+    type:"options"
+  },
+  {
+    name:'projectName',
+    label: 'Project Name',
+    type:'text'
+  }
+]
 
 const Users = () => {
+  const [allInputData,setAllInputData]=React.useState({
+    fullName: "",
+    email: "",
+    role: "",
+    ProjectName: ""
+  });
+  const array=[
+    {
+      name:'fullName',
+      label: 'Full Name',
+      type:'text',
+      value: allInputData?.fullName,
+    },
+    {
+      name:'email',
+      label: 'email',
+      type:'text',
+      value: allInputData?.email,
+    },
+    {
+      name:'role',
+      label: 'Role',
+      type:"options",
+      value: allInputData?.role,
+    },
+    {
+      name:'projectName',
+      label: 'Project Name',
+      type:'text',
+      value: allInputData?.ProjectName,
+    }
+  ]
+
+  function handleChange(evt) {
+    const value = evt.target.value;
+    setAllInputData({
+      ...allInputData,
+      [evt.target.name]: value
+    });
+  }
+  console.log(allInputData,"allInputData")
+
   return (
     <Layout>
       <DataGridTable
-        rows={rows}
+        rows={rows}s
         columns={columns}
         pagination={true}
         checkboxSelection={false}
@@ -80,6 +144,9 @@ const Users = () => {
         className="custom-data-grid"
       tablename="Employees Table"
       buttondata="Add Employees"
+      formArray={array}
+      formName="Employees"
+      handlechange={handleChange}
       />
     </Layout>
   );

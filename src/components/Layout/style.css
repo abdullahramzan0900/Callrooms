@@ -84,7 +84,7 @@ ul li a span svg {
 } */
 /* Dashboard-Header start */
 .header {
-    width: 100%;
+    width:80vw;
     height: 40PX;
     display: flex;
     align-items: center;

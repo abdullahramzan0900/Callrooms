@@ -3,6 +3,7 @@
     justify-content: space-between;
     background-color: #f0f2f5;
     padding: 20px;
+    /* height: 100vh; */
 }
 .item_style{
     height: 120px;

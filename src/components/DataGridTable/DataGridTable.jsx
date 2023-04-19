@@ -2,6 +2,8 @@ import * as React from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import './index.css'
 import { Button } from "@mui/material";
+import FormDialog from "../FormModel/FormDialog";
+import { useState } from "react";
 
 export const DataGridTable = ({
   rows,
@@ -12,8 +14,13 @@ export const DataGridTable = ({
   pageSizeOptions,
   pageSize,
   tablename,
-  buttondata
+  buttondata,
+  formArray,
+  formName,
+  handlechange
 }) => {
+  const [showmodel,Setshowmodel]=useState(false)
+  console.log(formArray,"aaaa")
   return (
  
       <div className="datagrid" >
@@ -24,7 +31,9 @@ export const DataGridTable = ({
 }}>{tablename}</h4>
 </div>
 <div>
-<Button>{buttondata}</Button>
+<Button onClick={(()=>{
+ Setshowmodel(!showmodel);
+})}>{buttondata}</Button>
 </div>
         </div>
         <DataGrid style={{ background: 'white' }}
@@ -42,7 +51,13 @@ export const DataGridTable = ({
           pageSizeOptions={pageSizeOptions}
           className={"custom-data-grid" }
         />
-      </div>
+<div>
+
+  {
+      showmodel && <FormDialog formArray={formArray} formName={formName} handlechange={handlechange} />
+  }
+</div>
+  </div>
  
   );
 };

@@ -80,7 +80,24 @@ const rows = [
     dailyScrum: "aaa",
   },
 ];
-
+const array=[
+  {
+    name:'ProjectName',
+    type:'text'
+  },
+  {
+    name:'ClientName',
+    type:'text'
+  },
+  {
+    name:'ProjectType',
+    type:'text'
+  },
+  {
+    name:'Dailyscrum',
+    type:'text'
+  }
+]
 export default function Project() {
   return (
     <Layout>
@@ -97,6 +114,8 @@ export default function Project() {
             className="custom-data-grid"
             tablename="Project Table"
             buttondata="Add Project"
+            formArray={array}
+            formName="Projects"
           />
         </main>
       </div>
