@@ -63,34 +63,92 @@ const rows = [
     TakenBy: "aaa",
   },
 ];
-const array=[
-  {
-    name:'RoomNumber',
-    type:'Number'
-  },
-  {
-    name:'Time',
-    type:'time'
-  },
-  {
-    name:'Role',
-    type:'options'
-  },
-  {
-    name:'callType',
-    type:'options'
-  },
-  {
-    name:'ProjectName',
-    type:'text'
-  },
-  {
-    name:'TakenBy',
-    type:'text'
-  }
-]
+// const array=[
+//   {
+//     name:'RoomNumber',
+//     type:'Number'
+//   },
+//   {
+//     name:'Time',
+//     type:'time'
+//   },
+//   {
+//     name:'Role',
+//     type:'options'
+//   },
+//   {
+//     name:'callType',
+//     type:'options'
+//   },
+//   {
+//     name:'ProjectName',
+//     type:'text'
+//   },
+//   {
+//     name:'TakenBy',
+//     type:'text'
+//   }
+
 
 export default function Calls() {
+  const [allInputData,setAllInputData]=React.useState({
+    RoomNumber: "",
+    Time: "",
+    Role: "",
+    callType:"",
+    ProjectName:"",
+    TakenBy:""
+
+
+  });
+  const array=[
+    {
+      name:'RoomNumber',
+      label: 'Room Number',
+      type:'number',
+      value: allInputData?.RoomNumber,
+    },
+    {
+      name:'Time',
+      label: 'Time',
+      type:'time',
+      value: allInputData?.Time,
+    },
+    {
+      name:'role',
+      label:'Role',
+      type:"options",
+      value: allInputData?.Role,
+    },
+    {
+      name:'callType',
+      label: 'callType',
+      type:'options',
+      value: allInputData?.callType,
+    },
+    {
+      name:'ProjectName',
+      label: 'ProjectName',
+      type:'text',
+      value: allInputData?.ProjectName,
+    },
+    {
+      name:'TakenBy',
+      label: 'TakenBy',
+      type:'text',
+      value: allInputData?.TakenBy,
+    },
+
+  ]
+
+  function handleChange(evt) {
+    const value = evt.target.value;
+    setAllInputData({
+      ...allInputData,
+      [evt.target.name]: value
+    });
+  }
+  console.log(allInputData,"allInputDataCalls")
   return (
     <Layout>
       <DataGridTable
@@ -101,10 +159,11 @@ export default function Calls() {
         pageSize={5}
         pageSizeOptions={[5, 10, 15]}
         className="custom-data-grid"
-        tablename="Calls Table"
+        tablename="Calls"
         buttondata="Add Calls"
         formArray={array}
         formName="Calls"
+        handlechange={handleChange}
       />
     </Layout>
   );

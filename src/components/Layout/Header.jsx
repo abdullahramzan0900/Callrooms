@@ -41,9 +41,9 @@ const Header = ({ collapsed, toggleCollapse }) => {
   return (
     <div className="header">
       <div className="left-sec">
-        <span onClick={() => toggleCollapse(!collapsed)}>
+        {/* <span onClick={() => toggleCollapse(!collapsed)}>
           <RiMenuUnfoldFill />
-        </span>
+        </span> */}
         <span>
           <AiTwotoneHome /> / {pathname}
         </span>

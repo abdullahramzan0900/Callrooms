@@ -80,25 +80,68 @@ const rows = [
     dailyScrum: "aaa",
   },
 ];
-const array=[
-  {
-    name:'ProjectName',
-    type:'text'
-  },
-  {
-    name:'ClientName',
-    type:'text'
-  },
-  {
-    name:'ProjectType',
-    type:'text'
-  },
-  {
-    name:'Dailyscrum',
-    type:'text'
-  }
-]
+// const array=[
+//   {
+//     name:'ProjectName',
+//     type:'text'
+//   },
+//   {
+//     name:'ClientName',
+//     type:'text'
+//   },
+//   {
+//     name:'ProjectType',
+//     type:'text'
+//   },
+//   {
+//     name:'Dailyscrum',
+//     type:'text'
+//   }
+// ]
 export default function Project() {
+  const [allInputData,setAllInputData]=React.useState({
+    ProjectName: "",
+    ClientName: "",
+    ProjectType: "",
+    Dailyscrum:""
+
+  });
+  const array=[
+    {
+      name:'ProjectName',
+      label: 'Project Name',
+      type:'text',
+      value: allInputData?.fullName,
+    },
+    {
+      name:'ClientName',
+      label: 'ClientName',
+      type:'text',
+      value: allInputData?.ClientName,
+    },
+    {
+      name:'ProjectType',
+      label: 'ProjectType',
+      type:"options",
+      value: allInputData?.ProjectType,
+    },
+    {
+      name:'Dailyscrum',
+      label: 'Dailyscrum',
+      type:'text',
+      value: allInputData?.Dailyscrum,
+    }
+  ]
+
+  function handleChange(evt) {
+    const value = evt.target.value;
+    setAllInputData({
+      ...allInputData,
+      [evt.target.name]: value
+    });
+  }
+  console.log(allInputData,"allInputDataProject")
+
   return (
     <Layout>
       <div className="dashboard-wrapper-content">
@@ -112,10 +155,11 @@ export default function Project() {
             pageSize={5}
             pageSizeOptions={[5, 10, 15]}
             className="custom-data-grid"
-            tablename="Project Table"
+            tablename="Project"
             buttondata="Add Project"
             formArray={array}
             formName="Projects"
+            handlechange={handleChange}
           />
         </main>
       </div>

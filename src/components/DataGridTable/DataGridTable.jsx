@@ -31,7 +31,7 @@ export const DataGridTable = ({
 }}>{tablename}</h4>
 </div>
 <div>
-<Button onClick={(()=>{
+<Button className="model_button" onClick={(()=>{
  Setshowmodel(!showmodel);
 })}>{buttondata}</Button>
 </div>

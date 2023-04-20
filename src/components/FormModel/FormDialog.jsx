@@ -14,7 +14,7 @@ import Select from "@mui/material/Select";
 import { Stack } from "@mui/material";
 import "./index.css";
 
-export default function FormDialog({ formArray, formName, handlechange }) {
+export default function FormDialog({ formArray, formName, handlechange}) {
   const [open, setOpen] = React.useState(true);
 
   const handleClickOpen = () => {
@@ -33,10 +33,12 @@ export default function FormDialog({ formArray, formName, handlechange }) {
         aria-labelledby="edit-apartment"
       >
         <DialogContent>
-          <h2>{formName}</h2>
-          {formArray?.forEach((item, index) => {
+          <h2 className="form-header">{formName}</h2>
+          <div className="form-div">
+
+          {formArray?.map((item, index) => {
             console.log(item.name === "options");
-            if (item.type === "text" || item.type === "time") {
+            if (item.type === "text" || item.type === "time" || item.type==="number") {
               return (
                 <div key={index}>
                   <TextField
@@ -48,7 +50,7 @@ export default function FormDialog({ formArray, formName, handlechange }) {
                     type={item.type}
                     onChange={(e) => handlechange(e, index)}
                     fullWidth
-                  />
+                    />
                 </div>
               );
             } else if (item.type === "options") {
@@ -58,6 +60,7 @@ export default function FormDialog({ formArray, formName, handlechange }) {
                     <InputLabel id="demo-simple-select-label">
                       {item.name}
                     </InputLabel>
+
                     <Select
                       sx={{
                         width: "100% !important",
@@ -67,7 +70,7 @@ export default function FormDialog({ formArray, formName, handlechange }) {
                       value={item?.value}
                       name={item?.name}
                       label={item.label}
-                    >
+                      >
                       <Stack>
                         <MenuItem value={10}>Ten</MenuItem>
                         <MenuItem value={20}>Twenty</MenuItem>
@@ -92,7 +95,7 @@ export default function FormDialog({ formArray, formName, handlechange }) {
                         value={item?.value}
                         name={item?.name}
                         label={item.label}
-                      >
+                        >
                         <Stack>
                           <MenuItem value={10}>Schedule</MenuItem>
                           <MenuItem value={20}>Unschedule</MenuItem>
@@ -101,15 +104,70 @@ export default function FormDialog({ formArray, formName, handlechange }) {
                     </div>
                   </>
                 );
+
+              } else if (item.name === "ProjectType") {
+                return (
+                  <>
+                    <div style={{}}>
+                      <InputLabel id="demo-simple-select-label">
+                        CallType
+                      </InputLabel>
+                      <Select
+                        sx={{
+                          width: "100% !important",
+                        }}
+                        labelId="demo-simple-select-label"
+                        id="demo-simple-select"
+                        value={item?.value}
+                        name={item?.name}
+                        label={item.label}
+                        >
+                        <Stack>
+                          <MenuItem value={10}>Schedule-Call</MenuItem>
+                          <MenuItem value={20}>Unschedule-Call</MenuItem>
+                        </Stack>
+                      </Select>
+                    </div>
+                  </>
+                );
               }
-            }
+              else if (item.name === "RoomType") {
+                return (
+                  <>
+                    <div style={{}}>
+                      <InputLabel id="demo-simple-select-label">
+                        {item.name}
+                      </InputLabel>
+                      <Select
+                        sx={{
+                          width: "100% !important",
+                        }}
+                        labelId="demo-simple-select-label"
+                        id="demo-simple-select"
+                        value={item?.value}
+                        name={item?.name}
+                        label={item.label}
+                        >
+                        <Stack>
+                          <MenuItem value={10}>Schedule-Room</MenuItem>
+                          <MenuItem value={20}>Unschedule-Room</MenuItem>
+                        </Stack>
+                      </Select>
+                    </div>
+                  </>
+                );
+              }
+            } 
           })}
+          </div>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} color="secondary">
             Cancel
           </Button>
-          <Button onClick={handleClose} color="primary">
+          <Button style={{
+            color:'#1a73e8'
+          }} onClick={handleClose} color="primary">
             Add
           </Button>
         </DialogActions>

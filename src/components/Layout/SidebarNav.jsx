@@ -7,9 +7,11 @@ import { AiOutlineHistory } from "react-icons/ai";
 import { FiUsers } from "react-icons/fi";
 import { FaThList } from "react-icons/fa";
 import { BsList } from "react-icons/bs";
+import { GrProjects } from "react-icons/gr";
 import logo from "../../assets/Images/wcloudtekLogo.svg";
 import "./style.css";
 import { NavLink } from "react-router-dom";
+
 
 function SidebarNav() {
   const { collapseSidebar } = useProSidebar();
@@ -49,7 +51,7 @@ function SidebarNav() {
   return (
     <div className="side-bar">
       <Sidebar>
-        <Menu>
+        {/* <Menu>
           <MenuItem
             onClick={() => {
               collapseSidebar();
@@ -58,7 +60,7 @@ function SidebarNav() {
             {" "}
             <RiMenuUnfoldFill />
           </MenuItem>
-        </Menu>
+        </Menu> */}
         <div className="coudtek_img">
           <img src={logo} alt="" />
         </div>

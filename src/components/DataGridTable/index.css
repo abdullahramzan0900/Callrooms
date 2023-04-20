@@ -37,8 +37,15 @@ padding-left: 10px;
 
 .table-header div Button{
      color: white;
-     padding: 5px;
-     padding:30px;
+     /* padding: 5px;
+     padding:30px; */
+     margin-top: 27px;
+     margin-right: 10px;
+}
+.table-header div Button:hover{
+
+
+
 }
 .custom-data-grid {
     border-radius: 0.5rem !important;
@@ -51,3 +58,5 @@ padding-left: 10px;
 .datagrid .MuiDataGrid-row {
     padding: 8px 0 8px 0;
 }
+
+

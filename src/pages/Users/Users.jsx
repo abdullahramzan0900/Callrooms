@@ -142,7 +142,7 @@ const Users = () => {
         pageSize={9}
         pageSizeOptions={[9, 15, 20]}
         className="custom-data-grid"
-      tablename="Employees Table"
+      tablename="Employees"
       buttondata="Add Employees"
       formArray={array}
       formName="Employees"

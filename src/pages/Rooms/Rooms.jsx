@@ -1,37 +1,127 @@
-import * as React from 'react';
-import { experimentalStyled as styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
-import Grid from '@mui/material/Grid';
-import Layout from '../../components/Layout/Layout';
-import './index.css'
+import * as React from "react";
+import { DataGridTable } from "../../components/DataGridTable";
+import Layout from "../../components/Layout/Layout";
 
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  ...theme.typography.body2,
-  padding: theme.spacing(2),
-  textAlign: 'center',
-  color: theme.palette.text.secondary,
-}));
+const columns = [
+  { field: "RoomNumber", headerName: "RoomNumber", width: 160 },
+  { field: "RoomType", headerName: "RoomType", width: 160 },
+  { field: "RoomCapacity", headerName: "RoomCapacity", width: 160 },
+  {
+    field: "status",
+    headerName: "status",
+    width: 160,
+  },
+];
 
+const rows = [
+  {
+    id: 1,
+    RoomNumber: "4",
+    RoomType: "schedule",
+    RoomCapacity: "aaa",
+    status: "aaaa",
+  },
+  {
+    id: 2,
+    RoomNumber: "5",
+    RoomType: "schedule",
+    RoomCapacity: "aaa",
+    status: "booked",
+  },
+  {
+    id: 3,
+    RoomNumber: "120",
+    RoomType: "schedule",
+    RoomCapacity: "aa",
+    status: "booked",
+  },
+  {
+    id: 4,
+    RoomNumber: "8",
+    RoomType: "schedule",
+    RoomCapacity: "bbbb",
+    status: "active",
+  },
+];
+// const array=[
+//   {
+//     name:'ProjectName',
+//     type:'text'
+//   },
+//   {
+//     name:'ClientName',
+//     type:'text'
+//   },
+//   {
+//     name:'ProjectType',
+//     type:'text'
+//   },
+//   {
+//     name:'Dailyscrum',
+//     type:'text'
+//   }
+// ]
 export default function Rooms() {
+  const [allInputData,setAllInputData]=React.useState({
+    RoomNumber: "",
+    RoomType: "",
+    RoomCapacity: "",
+   
+
+  });
+  const array=[
+    {
+      name:'RoomNumber',
+      label: 'Room Number',
+      type:'number',
+      value: allInputData?.RoomNumber,
+    },
+    {
+      name:'RoomType',
+      label: 'Room Type',
+      type:'options',
+      value: allInputData?.RoomType,
+    },
+
+    {
+      name:'RoomCapacity',
+      label: 'Room Capacity',
+      type:'text',
+      value: allInputData?.RoomCapacity,
+    }
+  ]
+
+  function handleChange(evt) {
+    const value = evt.target.value;
+    setAllInputData({
+      ...allInputData,
+      [evt.target.name]: value
+    });
+  }
+
+  console.log(allInputData,"allInputDataRooms")
+
   return (
     <Layout>
-<div className='rooms_div'>
-    <Box sx={{ flexGrow: 1 }}>
-      <Grid sx={{
-    
-      }} container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-        {Array.from(Array(6)).map((_, index) => (
-          <Grid sx={{
-          
-          }} item xs={4} sm={4} md={4} key={index}>
-            <Item>status:</Item>
-          </Grid>
-        ))}
-      </Grid>
-    </Box>
-        </div>
-        </Layout>
+      <div className="dashboard-wrapper-content">
+        <main>
+          {/* <DataGridTable/> */}
+          <DataGridTable
+            rows={rows}
+            columns={columns}
+            pagination={true}
+            checkboxSelection={false}
+            pageSize={5}
+            pageSizeOptions={[5, 10, 15]}
+            className="custom-data-grid"
+            tablename="Rooms"
+            buttondata="Add Room"
+            formArray={array}
+            formName="Rooms"
+            handlechange={handleChange}
+          />
+        </main>
+      </div>
+    </Layout>
   );
 }
