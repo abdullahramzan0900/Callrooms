@@ -13,6 +13,7 @@ import {IoMdCall} from 'react-icons/io';
 import {AiOutlineHistory} from 'react-icons/ai';
 
 import {FaThList} from 'react-icons/fa';
+
 import { BsList} from 'react-icons/bs';
 
 function DataCharts(){
@@ -26,18 +27,21 @@ function DataCharts(){
       const array = [
         {
           data: "Calls",
-          update: "+55% than lask week",
+          update: "Today",
           icon: <IoMdCall size={80} />,
+          record:'20'
         },
         {
           data: "Rooms",
-          update: "+55% than lask week",
+          update: "Total Rooms",
           icon: <MdMeetingRoom size={80} />,
+          record:'8'
         },
         {
           data: "employees",
-          update: "+55% than lask week",
+          update: "Total Employees",
           icon: <FiUsers size={80} />,
+          record:'50'
         },
       ];
     return(
@@ -50,7 +54,7 @@ function DataCharts(){
           columns={{ xs: 4, sm: 8, md: 12 }}
         >
           {array.map((item, index) => (
-            <Grid item xs={3} sm={4} md={4} key={index}>
+            <Grid  item xs={3} sm={4} md={4} key={index}>
               <Item className="item_style" style={{}}>
                 {item.data}
                 <div className="main_div">
@@ -59,7 +63,7 @@ function DataCharts(){
                   </div>
                   <div>
                     {item.data}
-                    <h1>18</h1>
+                    <h1>{item.record}</h1>
                   </div>
                 </div>
                 <div>{item.update}</div>

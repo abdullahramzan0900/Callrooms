@@ -8,7 +8,7 @@ const PieChart = () => {
     labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
     datasets: [
       {
-        data: [12, 20, 6, 9, 15],
+        data: [5, 8, 4, 3, 5],
         backgroundColor: [
           '#ff6384',
           '#36a2eb',

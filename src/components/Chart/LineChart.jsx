@@ -16,7 +16,6 @@ import {AiOutlineHistory} from 'react-icons/ai';
 
 import {FaThList} from 'react-icons/fa';
 import { BsList} from 'react-icons/bs';
-
 import DataCharts from "../../components/Chart/DataCharts";
 
 function LineChart(){
@@ -87,6 +86,14 @@ function LineChart(){
         chart.destroy();
       };
     }, []);
+    const array=[
+      {
+        data:'Rooms'
+      },
+      {
+        data:"Projects"
+      }
+    ]
     
     return(
         <>
@@ -94,8 +101,8 @@ function LineChart(){
           <div className="canvas">
             <canvas ref={canvasRef} />
             <div className="canvas-footer">
-                <h3>Website Views</h3>
-                <p>Last Campaign Performance</p>
+                <h3>Projects</h3>
+                <p>  Performance</p>
             </div>
           </div>
         </div>

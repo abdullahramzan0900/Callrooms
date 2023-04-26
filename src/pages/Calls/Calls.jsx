@@ -12,12 +12,7 @@ const columns = [
     width: 160,
   },
   { field: "TakenBy", headerName: "TakenBy", width: 160 },
-  {
-    field: "click",
-    headerName: "Click",
-    type: <button /> /*this field stores the buttons*/,
-    width: 90,
-  },
+
 ];
 
 const rows = [

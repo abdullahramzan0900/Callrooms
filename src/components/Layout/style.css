@@ -14,7 +14,7 @@
     width: auto !important;
 }
 .side-bar aside .ps-sidebar-container {
-    width: 15%;
+    width:15%;
     /* padding: 20px; */
     background: linear-gradient(150deg, #49a3f1,rgb(5, 118, 188));
     color: #344767;
@@ -26,7 +26,7 @@
     z-index: 1200;
     -webkit-overflow-scrolling: touch;
     position: fixed;
-
+z-index: 999999;
     outline: 0;
     /* padding: 20px; */
 }
@@ -71,6 +71,7 @@ ul li a span {
     font-size: 1em;
 }
 ul li a span svg {
+    stroke: white !important;
     width: 1em;
     height: 1em;
     font-size: 1.6rem;
@@ -134,4 +135,97 @@ ul li a span svg {
     margin: 0;
     text-transform: capitalize;
 }
+.toggle-button{
+    display: none;
+}
+@media screen and (min-width:1211px){
+    .layout_sidenavabar{
+        display: inline !important  ;
+    }
+    .side-bar aside .ps-sidebar-container {
+   display: inline !important;
+    }
+    .side-bar-collapse{
+       display: inline !important; 
+    }
+}
 
+
+
+
+
+  @media screen and (max-width: 1211px) {
+    .layout_sidenavabar{
+        display: none  ;
+    }
+    .header{    
+        width: 94vw;
+    }
+
+    .datagrid{
+        width: 94vw;
+    }
+    .toggle-button{
+        display: inline !important;
+    }
+    .css-17p3wh3-MuiGrid-root {
+
+        max-width: 99.333333% !important;
+        /* this is for main grid which is in layout */
+    } 
+    .css-11reh94-MuiGrid-root>.MuiGrid-item {
+   padding-top: 0px !important;
+    }
+    .css-11reh94-MuiGrid-root{
+        margin-top: 0px !important;
+    }
+    .side-bar aside .ps-sidebar-container{
+        width:220px;
+
+    }
+
+}
+
+@media screen and (max-width:1013px){
+    .calls-graph .line-graph .pi-chart {
+        width: 78%;
+        height: 159px;
+
+    }
+    .calls-graph {
+        width: 100%;
+        height: 72vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media screen and (max-width:825px){
+  
+}
+@media  screen and  (max-width:599px){
+
+    .css-yk21xg-MuiGrid-root {
+        flex-basis: 96% !important;
+        max-width: 100% !important;
+    }
+}
+.layout_sidenavabar {
+    display: inline;
+    /* for sidenavbar class */
+  }
+  
+  .layout_sidenavabar--collapsed {
+    display: none;
+        /* for sidenavbar class */
+  }
+  .side-bar{
+    display: inline;
+  }
+  .side-bar-collapse{
+    display: none;
+  }
+
+  
+  
+  

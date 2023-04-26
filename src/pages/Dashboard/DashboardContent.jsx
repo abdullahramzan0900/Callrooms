@@ -16,8 +16,8 @@ export default function DashboardContent() {
                 <PieChart/>
             </div>
             <div className="canvas-footer">
-                <h3>Website Views</h3>
-                <p>Last Campaign Performance</p>
+                <h3>Calls</h3>
+                <p>weekly Calls</p>
             </div>
           </div>
         </div>

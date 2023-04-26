@@ -28,6 +28,8 @@ import { AiTwotoneHome } from "react-icons/ai";
 import { useLocation } from "react-router-dom";
 import { RiMenuUnfoldFill } from "react-icons/ri";
 
+
+
 const Header = ({ collapsed, toggleCollapse }) => {
   const location = useLocation();
   const [pathname, setPathname] = useState();
@@ -37,18 +39,33 @@ const Header = ({ collapsed, toggleCollapse }) => {
     console.log(appId);
     setPathname(appId);
   }, [location]);
-
+  console.log(collapsed,"aaa")
   return (
     <div className="header">
       <div className="left-sec">
-        {/* <span onClick={() => toggleCollapse(!collapsed)}>
+{/*    
+        <span className="toggle-button" onClick={() =>{
+
+          
+          toggleCollapse(!collapsed)
+     }}
+          >
           <RiMenuUnfoldFill />
-        </span> */}
-        <span>
+        </span>  */}
+        <span>  
           <AiTwotoneHome /> / {pathname}
         </span>
         <h3>{pathname}</h3>
       </div>
+ 
+      <span className="toggle-button" onClick={() =>{
+
+          
+toggleCollapse(!collapsed)
+}}
+>
+<RiMenuUnfoldFill />
+</span> 
       <div className="right-sec">
         <span>A</span>
       </div>

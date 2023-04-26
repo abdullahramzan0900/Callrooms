@@ -1,100 +1,106 @@
-.dashboard-content {
-    display: flex;
-    justify-content: space-between;
-    background-color: #f0f2f5;
-    padding: 20px;
-    /* height: 100vh; */
-}
-.item_style{
-    height: 120px;
-    background-color: #ffffff;
-    -webkit-background-clip: border-box;
-    background-clip: border-box;
-    border: 0 solid rgba(0, 0, 0, 0.125);
-    border-radius: 0.75rem;
-    box-shadow: 0rem 0.25rem 0.375rem -0.0625rem rgba(0, 0, 0, 0.1), 0rem 0.125rem 0.25rem -0.0625rem rgba(0, 0, 0, 0.06) !important;
-    overflow: visible;
-}
-.main_div{
-    display: flex;
-    justify-content: space-between;
-    line-height: 1;
-}
-.icon_div{
-    position: relative;
-    top: -55px;
-    height: 60px;
-    width: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(150deg, #49a3f1,rgb(5, 118, 188));
-    color: #ffffff;
-    border-radius: 0.75rem;
-    box-shadow: 0rem 0.25rem 1.25rem 0rem rgba(0, 0, 0, 0.14), 0rem 0.4375rem 0.625rem -0.3125rem rgba(64, 64, 64, 0.4);
-}
-.icon_div svg {
-    width: 35px;
-}
-.calls-graph {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-.calls-graph .line-graph {
-    width: 48%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.calls-graph .line-graph .canvas {
-    position: relative;
-    height: 250px;
-    width: 470px    ;
-    background-color: #ffffff;
-    padding: 30px;
-    -webkit-background-clip: border-box;
-    background-clip: border-box;
-    border: 0 solid rgba(0, 0, 0, 0.125);
-    border-radius: 0.75rem;
-    box-shadow: 0rem 0.25rem 0.375rem -0.0625rem rgba(0, 0, 0, 0.1), 0rem 0.125rem 0.25rem -0.0625rem rgba(0, 0, 0, 0.06);
-    overflow: visible;
-}
-.calls-graph .line-graph .canvas canvas {
-    position: absolute;
-    top: -35px;
-    padding: 20px;
-    opacity: 1;
-    background: linear-gradient(195deg, #49a3f1, #1A73E8);
-    color: #ffffff;
-    border-radius: 0.5rem;
-    box-shadow: 0rem 0.25rem 1.25rem 0rem rgba(0, 0, 0, 0.14), 0rem 0.4375rem 0.625rem -0.3125rem rgba(0, 187, 212, 0.4);
-}
-.calls-graph .line-graph .canvas .canvas-footer {
-    position: absolute;
-    bottom: 0;
-}
-.calls-graph .line-graph h1 {
-   text-align: center;
-}
-.calls-graph .line-graph .pi-chart {
-    width: 80%;
-    height: 180px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: -35px;
-    padding: 20px;
-    opacity: 1;
-    background: linear-gradient(195deg, #49a3f1, #1A73E8);
-    color: #ffffff;
-    border-radius: 0.5rem;
-    box-shadow: 0rem 0.25rem 1.25rem 0rem rgba(0, 0, 0, 0.14), 0rem 0.4375rem 0.625rem -0.3125rem rgba(0, 187, 212, 0.4);
-}
+    .dashboard-content {
+        display: flex;
+        justify-content: space-between;
+        background-color: #f0f2f5;
+        padding: 20px;
+        /* height: 95vh; */
+    }
+    .item_style{
+        height: 120px;
+        background-color: #ffffff;
+        -webkit-background-clip: border-box;
+        background-clip: border-box;
+        border: 0 solid rgba(0, 0, 0, 0.125);
+        border-radius: 0.75rem;
+        box-shadow: 0rem 0.25rem 0.375rem -0.0625rem rgba(0, 0, 0, 0.1), 0rem 0.125rem 0.25rem -0.0625rem rgba(0, 0, 0, 0.06) !important;
+        overflow: visible;
+    }
+    .main_div{
+        display: flex;
+        justify-content: space-between;
+        line-height: 1;
+    }
+    .icon_div{
+        position: relative;
+        top: -55px;
+        height: 60px;
+        width: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(150deg, #49a3f1,rgb(5, 118, 188));
+        color: #ffffff;
+        border-radius: 0.75rem;
+        box-shadow: 0rem 0.25rem 1.25rem 0rem rgba(0, 0, 0, 0.14), 0rem 0.4375rem 0.625rem -0.3125rem rgba(64, 64, 64, 0.4);
+    }
+    .icon_div svg {
+        width: 35px;
+    }
+    .calls-graph {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .calls-graph .line-graph {
+        width: 48%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .calls-graph .line-graph .canvas {
+        position: relative;
+        height: 250px;
+        width: 470px    ;
+        background-color: #ffffff;
+        padding: 30px;
+        -webkit-background-clip: border-box;
+        background-clip: border-box;
+        border: 0 solid rgba(0, 0, 0, 0.125);
+        border-radius: 0.75rem;
+        box-shadow: 0rem 0.25rem 0.375rem -0.0625rem rgba(0, 0, 0, 0.1), 0rem 0.125rem 0.25rem -0.0625rem rgba(0, 0, 0, 0.06);
+        overflow: visible;
+    }
+    .calls-graph .line-graph .canvas canvas {
+        position: absolute;
+        top: -35px;
+        padding: 20px;
+        opacity: 1;
+        background: linear-gradient(195deg, #49a3f1, #1A73E8);
+        color: #ffffff;
+        border-radius: 0.5rem;
+        box-shadow: 0rem 0.25rem 1.25rem 0rem rgba(0, 0, 0, 0.14), 0rem 0.4375rem 0.625rem -0.3125rem rgba(0, 187, 212, 0.4);
+    }
+    .calls-graph .line-graph .canvas .canvas-footer {
+        position: absolute;
+        bottom: 0;
+    }
+    .calls-graph .line-graph h1 {
+    text-align: center;
+    }
+    .calls-graph .line-graph .pi-chart {
+        width: 80%;
+        height: 180px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: -35px;
+        padding: 20px;
+        opacity: 1;
+        background: linear-gradient(195deg, #49a3f1, #1A73E8);
+        color: #ffffff;
+        border-radius: 0.5rem;
+        box-shadow: 0rem 0.25rem 1.25rem 0rem rgba(0, 0, 0, 0.14), 0rem 0.4375rem 0.625rem -0.3125rem rgba(0, 187, 212, 0.4);
+    }
 
-.calls-graph .line-graph .pi-chart canvas {
-    background: transparent !important;
-    box-shadow: none !important;
-    position: unset !important;
+    .calls-graph .line-graph .pi-chart canvas {
+        background: transparent !important;
+        box-shadow: none !important;
+        position: unset !important;
+    }
+@media screen and( max-width:586px){
+    .css-yk21xg-MuiGrid-root{
+        max-width: 100% !important;
+        flex-basis: 100% !important;
+    }
 }

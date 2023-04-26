@@ -56,7 +56,9 @@ export default function FormDialog({ formArray, formName, handlechange}) {
             } else if (item.type === "options") {
               if (item.name === "role") {
                 return (
-                  <>
+                  <div style={{
+                    marginTop:'20px'
+                  }}>
                     <InputLabel id="demo-simple-select-label">
                       {item.name}
                     </InputLabel>
@@ -77,12 +79,14 @@ export default function FormDialog({ formArray, formName, handlechange}) {
                         <MenuItem value={30}>Thirty</MenuItem>
                       </Stack>
                     </Select>
-                  </>
+                  </div>
                 );
               } else if (item.name === "callType") {
                 return (
                   <>
-                    <div style={{}}>
+                    <div style={{
+                      marginTop:'20px'
+                    }}>
                       <InputLabel id="demo-simple-select-label">
                         CallType
                       </InputLabel>
@@ -108,7 +112,9 @@ export default function FormDialog({ formArray, formName, handlechange}) {
               } else if (item.name === "ProjectType") {
                 return (
                   <>
-                    <div style={{}}>
+                    <div style={{
+                            marginTop:'20px'
+                    }}>
                       <InputLabel id="demo-simple-select-label">
                         CallType
                       </InputLabel>
@@ -134,7 +140,9 @@ export default function FormDialog({ formArray, formName, handlechange}) {
               else if (item.name === "RoomType") {
                 return (
                   <>
-                    <div style={{}}>
+                    <div style={{
+                      marginTop:'20px'
+                    }}>
                       <InputLabel id="demo-simple-select-label">
                         {item.name}
                       </InputLabel>
