@@ -31,11 +31,18 @@
         background: linear-gradient(150deg, #49a3f1,rgb(5, 118, 188));
         color: #ffffff;
         border-radius: 0.75rem;
+        transition: all 0.80s ease-out;
         box-shadow: 0rem 0.25rem 1.25rem 0rem rgba(0, 0, 0, 0.14), 0rem 0.4375rem 0.625rem -0.3125rem rgba(64, 64, 64, 0.4);
     }
     .icon_div svg {
         width: 35px;
     }
+    .icon_div:hover{
+        margin-top: 11px;
+        transition: all 1s ease-out;
+        transform: rotate(360deg);
+    }
+  
     .calls-graph {
         width: 100%;
         display: flex;
@@ -98,9 +105,3 @@
         box-shadow: none !important;
         position: unset !important;
     }
-@media screen and( max-width:586px){
-    .css-yk21xg-MuiGrid-root{
-        max-width: 100% !important;
-        flex-basis: 100% !important;
-    }
-}

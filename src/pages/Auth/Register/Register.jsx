@@ -1,17 +1,16 @@
-import * as React from 'react';
-import Button from '@mui/material/Button';
-import CssBaseline from '@mui/material/CssBaseline';
-import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
-import Link from '@mui/material/Link';
-import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import cloudteklogo from '../../../assets/Images/cloudteklogo.svg'
-import '../Login/style.css'
-
+import * as React from "react";
+import Button from "@mui/material/Button";
+import CssBaseline from "@mui/material/CssBaseline";
+import TextField from "@mui/material/TextField";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
+import Link from "@mui/material/Link";
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import cloudteklogo from "../../../assets/Images/cloudteklogo.svg";
+import "../Login/style.css";
 
 const theme = createTheme();
 
@@ -20,30 +19,40 @@ export default function Register() {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     console.log({
-      email: data.get('email'),
-      password: data.get('password'),
+      email: data.get("email"),
+      password: data.get("password"),
     });
   };
 
   return (
     <ThemeProvider theme={theme}>
-      <Container sx={{
-        display:'flex'
-      }} component="login-form" maxWidth="xs">
+      <Container
+        sx={{
+          display: "flex",
+        }}
+        component="login-form"
+        maxWidth="xs"
+      >
         <CssBaseline />
         <Box
           sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
           }}
         >
-          <div className='form-header'>
+          <div className="form-header">
             <img src={cloudteklogo} alt="" />
           </div>
 
-          <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
-            <TextField className='field'
+          <Box
+            component="form"
+            onSubmit={handleSubmit}
+            noValidate
+            sx={{ mt: 1 }}
+          >
+            <TextField
+              className="field"
               margin="normal"
               required
               fullWidth
@@ -53,7 +62,8 @@ export default function Register() {
               autoComplete="f-name"
               autoFocus
             />
-            <TextField className='field'
+            <TextField
+              className="field"
               margin="normal"
               required
               fullWidth
@@ -63,7 +73,8 @@ export default function Register() {
               autoComplete="l-name"
               autoFocus
             />
-            <TextField className='field'
+            <TextField
+              className="field"
               margin="normal"
               required
               fullWidth
@@ -73,7 +84,8 @@ export default function Register() {
               autoComplete="email"
               autoFocus
             />
-            <TextField className='field'
+            <TextField
+              className="field"
               margin="normal"
               required
               fullWidth
@@ -83,7 +95,8 @@ export default function Register() {
               id="password"
               autoComplete="current-password"
             />
-            <TextField className='field'
+            <TextField
+              className="field"
               margin="normal"
               required
               fullWidth
@@ -123,8 +136,7 @@ export default function Register() {
             </Grid>
           </Box>
         </Box>
-
-      </Container>    
+      </Container>
     </ThemeProvider>
   );
 }

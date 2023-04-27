@@ -83,8 +83,8 @@
             {arr.map((item, index) => {
               return (
                 <NavLink to={item.link} key={index}>
-                  <MenuItem style={{}}>
-                    {item.Icon}
+                  <MenuItem className="Dashboard_item" style={{}}>
+                    {item.Icon}   
                     <span>{item.name}</span>
                   </MenuItem>
                 </NavLink>

@@ -1,22 +1,22 @@
-import React, { useRef, useEffect } from 'react';
-import Chart from 'chart.js/auto';
+import React, { useRef, useEffect } from "react";
+import Chart from "chart.js/auto";
 
 const PieChart = () => {
   const canvasRef = useRef(null);
 
   const data = {
-    labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+    labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
     datasets: [
       {
         data: [5, 8, 4, 3, 5],
         backgroundColor: [
-          '#ff6384',
-          '#36a2eb',
-          '#ffce56',
-          '#4bc0c0',
-          '#9966ff',
+          "#ff6384",
+          "#36a2eb",
+          "#ffce56",
+          "#4bc0c0",
+          "#9966ff",
         ],
-        borderColor: '#fff',
+        borderColor: "#fff",
         borderWidth: 1,
       },
     ],
@@ -25,7 +25,7 @@ const PieChart = () => {
   useEffect(() => {
     const canvas = canvasRef.current;
     const chart = new Chart(canvas, {
-      type: 'pie',
+      type: "pie",
       data: data,
       options: {
         responsive: true,

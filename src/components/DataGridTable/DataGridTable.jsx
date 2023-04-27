@@ -17,7 +17,7 @@ export const DataGridTable = ({
   buttondata,
   formArray,
   formName,
-  handlechange
+  handlechange,
 }) => {
   const [showmodel,Setshowmodel]=useState(false)
   console.log(formArray,"aaaa")

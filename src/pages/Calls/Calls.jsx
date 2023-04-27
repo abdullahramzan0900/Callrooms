@@ -12,7 +12,6 @@ const columns = [
     width: 160,
   },
   { field: "TakenBy", headerName: "TakenBy", width: 160 },
-
 ];
 
 const rows = [
@@ -58,92 +57,64 @@ const rows = [
     TakenBy: "aaa",
   },
 ];
-// const array=[
-//   {
-//     name:'RoomNumber',
-//     type:'Number'
-//   },
-//   {
-//     name:'Time',
-//     type:'time'
-//   },
-//   {
-//     name:'Role',
-//     type:'options'
-//   },
-//   {
-//     name:'callType',
-//     type:'options'
-//   },
-//   {
-//     name:'ProjectName',
-//     type:'text'
-//   },
-//   {
-//     name:'TakenBy',
-//     type:'text'
-//   }
-
 
 export default function Calls() {
-  const [allInputData,setAllInputData]=React.useState({
+  const [allInputData, setAllInputData] = React.useState({
     RoomNumber: "",
     Time: "",
-    Role: "",
-    callType:"",
-    ProjectName:"",
-    TakenBy:""
-
-
+    Role: "admin",
+    callType: "",
+    ProjectName: "",
+    TakenBy: "",
   });
-  const array=[
+  const array = [
     {
-      name:'RoomNumber',
-      label: 'Room Number',
-      type:'number',
+      name: "RoomNumber",
+      label: "Room Number",
+      type: "number",
       value: allInputData?.RoomNumber,
     },
     {
-      name:'Time',
-      label: 'Time',
-      type:'time',
+      name: "Time",
+      label: "Time",
+      type: "time",
       value: allInputData?.Time,
     },
     {
-      name:'role',
-      label:'Role',
-      type:"options",
+      name: "role",
+      label: "Role",
+      type: "options",
       value: allInputData?.Role,
     },
     {
-      name:'callType',
-      label: 'callType',
-      type:'options',
+      name: "callType",
+      label: "callType",
+      type: "options",
       value: allInputData?.callType,
     },
     {
-      name:'ProjectName',
-      label: 'ProjectName',
-      type:'text',
+      name: "ProjectName",
+      label: "ProjectName",
+      type: "text",
       value: allInputData?.ProjectName,
     },
     {
-      name:'TakenBy',
-      label: 'TakenBy',
-      type:'text',
+      name: "TakenBy",
+      label: "TakenBy",
+      type: "text",
       value: allInputData?.TakenBy,
     },
+  ];
 
-  ]
-
-  function handleChange(evt) {
+  function handleChange(evt,val) {
+console.log(evt.target,val,"value111")
     const value = evt.target.value;
     setAllInputData({
       ...allInputData,
-      [evt.target.name]: value
+      [evt.target.name]: value,
     });
   }
-  console.log(allInputData,"allInputDataCalls")
+  console.log(allInputData, "allInputDataCalls");
   return (
     <Layout>
       <DataGridTable
